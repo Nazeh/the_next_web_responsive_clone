@@ -60,3 +60,46 @@ nav {
 .nav-icons li{
     border-left: 1px solid rgb(238, 238, 238);
 }
+
+
+/* FOOTER */
+footer{
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    
+}
+footer a{
+    text-decoration: none;
+}
+.footer-links{
+     background-color: #131313;
+     padding: 2.5em 20px;
+}
+
+.footer-links ul{
+    display:flex; 
+    justify-content: center;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+  
+}
+
+.footer-links ul li{
+    margin: 0 4px;
+    font-family: Shentox,sans-serif;
+}
+
+.footer-legal{
+    display: inline;
+    padding: 32px 20px;
+}
+.footer-legal span{
+    text-align: center;
+    width: 100%;
+    
+}
+
+
