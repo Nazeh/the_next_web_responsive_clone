@@ -1,6 +1,7 @@
-a{
+a {
     color: inherit;
 }
+
 /* Navbar */
 nav {
     display: flex;
@@ -38,11 +39,11 @@ nav {
     justify-content: space-between
 }
 
-.nav-white a:hover{
+.nav-white a:hover {
     color: rgb(85, 85, 85);
 }
 
-.nav-sections ul{
+.nav-sections ul {
     display: inherit;
     display: none;
 }
@@ -52,54 +53,92 @@ nav {
     height: 100%;
 
 }
-.nav-icons a{
+
+.nav-icons a {
     padding: 18px;
     align-self: center
 }
 
-.nav-icons li{
+.nav-icons li {
     border-left: 1px solid rgb(238, 238, 238);
 }
 
 
 /* FOOTER */
-footer{
-    width: 100%;
-    margin-bottom: 10px;
+footer {
+    margin-bottom: 20px;
+
     background-color: black;
-    color: white;
+    color: #aaa;
     font-size: 13px;
-    
 }
-footer a{
+
+footer a {
     text-decoration: none;
 }
-.footer-links{
-     background-color: #131313;
-     padding: 2.5em 20px;
-}
 
-.footer-links ul{
-    display:flex; 
-    justify-content: center;
-    margin-bottom: 1.5em;
-    text-transform: uppercase;
-  
-}
-
-.footer-links ul li{
-    margin: 0 4px;
-    font-family: Shentox,sans-serif;
-}
-
-.footer-legal{
-    display: inline;
+footer div {
     padding: 32px 20px;
 }
-.footer-legal span{
-    text-align: center;
-    width: 100%;
-    
+
+.footer-links {
+    background-color: #131313;
+}
+
+.links-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-transform: uppercase;
+
+    max-width: 420px;
+    margin:auto;
+    margin-bottom: 21px
 }
 
 
+.links-social a {
+    font-size: 18px;
+    display: grid;
+    height: 40px;
+    width: 40px;
+
+    color: white;
+    background-color: #333;
+    border-radius: 50%;
+    place-content: center;
+}
+
+
+.links-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+
+    max-width: 420px;
+    margin:auto;
+}
+
+.footer-legal {
+    display: grid;
+    justify-items: center;
+    line-height: 2em;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-legal b {
+    color: red;
+}
+
+
+/* Media Query */
+@media only screen and (min-width: 760px){
+    .footer-legal{
+        display: flex;
+        justify-content: center;
+    }
+} 
