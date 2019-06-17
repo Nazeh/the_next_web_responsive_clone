@@ -88,12 +88,14 @@ footer div {
 .links-social {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     text-transform: uppercase;
+    justify-content: center;
 
-    max-width: 420px;
     margin:auto;
     margin-bottom: 21px
+}
+.links-social li{
+    margin: 5px 12px;
 }
 
 
@@ -113,14 +115,18 @@ footer div {
 .links-menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     text-transform: uppercase;
     font-family: 'Teko', sans-serif;
     font-size: 20px;
 
-    max-width: 420px;
     margin:auto;
 }
+
+.links-menu li{
+    margin: 5px 12px;
+}
+
 
 .footer-legal {
     display: grid;
