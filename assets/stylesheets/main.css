@@ -89,9 +89,49 @@ nav {
 main{
     height: 200vh;
     background-color: #aaa;
+    
 }
 
+.cover{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
+    grid-gap: 5px;
+    height: 60vh;
+    margin: 0 auto;
+    padding: 4px;
+    
+    background-color: #333;
+    
+}
+
+.story-1{
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background-color: #f42;
+    padding: 16px 12px;
+}
+.story-2{
+    background-color: #c09;
+
+}
+.story-3{
+    background-color:blue;
+}
+
+.latest-news{
+    display: block;
+   
+}
+.latest-news div{
+    display: flex;
+    height: 80px;
+    width: 80px;
+    background-color: aqua;
+}
+.latest-news :nth-child(odd){
+    background-color: green;
+}
 /* FOOTER */
 footer {
     margin-bottom: 20px;
