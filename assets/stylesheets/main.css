@@ -262,10 +262,33 @@ main section {
 /* wrapper */
 
 .wrapper {
-    max-width: 1192px;
+    max-width: 1152px;
     padding: 0 20px;
     margin: auto;
 }
+
+.wrapper a{
+    text-decoration: none;
+}
+
+.wrapper section{
+    display: grid;
+    padding: 24px 0 ;
+}
+
+.wrapper section h2{
+    color: #f42;
+    font-family: 'Passion One', cursive;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.wrapper section h2::after{
+    content: " >"
+}
+
+
+
 
 .latest-news {
     display: block;
@@ -274,13 +297,6 @@ main section {
 
 }
 
-.latest-news h2 {
-    /* grid-column: span 9; */
-    display: inline-block;
-    color: #f42;
-    font-weight: 700;
-    line-height: 1.1;
-}
 
 .latest-news div {
     display: block;
@@ -445,21 +461,19 @@ footer div {
     }
 
     /* latest-new */
+
+    .wrapper section h2{
+        grid-column: span 3;
+    }
  
     .latest-news {
+        max-width: 100%;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
           
     }
     
-    .latest-news h2{
-        grid-column: span 4;
-        /* display: inline-flex; */
-        /* flex-flow: row wrap; */
-        color: #f42;
-        font-weight: 700;
-        line-height: 1.1;
-    }
+
     
     .latest-news div {
        
@@ -489,5 +503,13 @@ footer div {
     .cover-logo,
     .cover-date {
         display: block;
+    }
+
+    .wrapper section{
+        grid-template-columns: repeat(4, 1fr)
+    }
+
+    .wrapper section h2{
+        grid-column: span 4;
     }
 }
