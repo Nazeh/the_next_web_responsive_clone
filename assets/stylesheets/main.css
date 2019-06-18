@@ -204,21 +204,28 @@ main section {
     margin: auto;
 }
 
-
 .latest-news {
-    display: block;
+    display: flex;
+    /* grid-template-columns: repeat(9, 1fr); */
+      
+}
+
+.latest-news h2{
+    /* grid-column: span 9; */
+    display: inline-flex;
+    flex-flow: row wrap;
+    color: #f42;
+    font-weight: 700;
+    line-height: 1.1;
 }
 
 .latest-news div {
-    display: flex;
+   
     height: 80px;
     width: 80px;
     background-color: aqua;
 }
 
-.latest-news :nth-child(odd) {
-    background-color: green;
-}
 
 
 /* FOOTER */
