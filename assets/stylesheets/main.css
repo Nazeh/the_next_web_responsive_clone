@@ -276,19 +276,34 @@ main section {
 
 .latest-news h2 {
     /* grid-column: span 9; */
-    display: inline-flex;
-    flex-flow: row wrap;
+    display: inline-block;
     color: #f42;
     font-weight: 700;
     line-height: 1.1;
 }
 
 .latest-news div {
-
-    height: 80px;
-    width: 80px;
+    display: block;
+    min-height: 72px;
+    width: 100%;
+    position: relative;
     background-color: aqua;
+    /* border: 1px solid black; */
+    font-size: 14px;
 }
+.latest-news h2 a{
+    font-size: 28px;
+
+}
+.latest-news-images{
+    background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/06/Featured-Image-TNW-405x270.jpeg);
+    left: 0;
+    padding-top: 75px;
+    position: absolute;
+    top: 0;
+    
+    width: 75px;
+} 
 
 
 
@@ -427,6 +442,31 @@ footer div {
 
     .nav-black {
         display: flex;
+    }
+
+    /* latest-new */
+ 
+    .latest-news {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+          
+    }
+    
+    .latest-news h2{
+        grid-column: span 4;
+        /* display: inline-flex; */
+        /* flex-flow: row wrap; */
+        color: #f42;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+    
+    .latest-news div {
+       
+        height: 189px;
+        width: 230px;
+        padding: 12px;
+        background-color: white;
     }
 }
 
