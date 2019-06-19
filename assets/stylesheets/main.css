@@ -275,7 +275,7 @@ article .cover-trigger {
     margin: auto;
 
     display: grid;
-    row-gap: 56px;
+    row-gap: 60px;
 }
 
 .wrapper a {
@@ -606,7 +606,10 @@ article .cover-trigger {
     position: relative;
 
     padding: 6px 14px;
-    color: #aaa;
+    color: rgb(85, 85, 85);
+
+    line-height: 20px;
+    border-bottom: 1px solid #ddd;
 }
 
 .middle-wrapper section ul li::before {
@@ -619,7 +622,7 @@ article .cover-trigger {
     height: 4px;
     position: absolute;
     left: 3px;
-    top: 10px;
+    top: 14px;
 }
 
 .middle-wrapper section ul li a:hover {
@@ -837,11 +840,13 @@ footer div {
     .middle-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        row-gap: 44px;
+        row-gap: 40px;
         column-gap: 20px;
     }
 
-
+    .section-latest :nth-child(1){
+        grid-column: 1;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
