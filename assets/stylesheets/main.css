@@ -157,6 +157,9 @@ nav {
 
 
 /* Main */
+main {
+    padding-bottom: 40px;
+}
 
 main section {
     display: grid;
@@ -277,28 +280,28 @@ main section {
 }
 
 .wrapper section h2 {
-
-    font-family: 'Passion One', cursive;
+    font-family: Avalon, sans-serif;
     font-size: 28px;
     margin-bottom: 24px;
 }
 
 .wrapper section h2 a::after {
-    content: " >"
+    content: " >";
+    font-family: 'Passion One', cursive;
 }
 
-.wrapper section header a{
+.wrapper section header a {
     color: #f42;
 }
 
-.wrapper section header a:hover{
+.wrapper section header a:hover {
     color: #000;
 }
 
 /* news */
 .news-deals div {
     display: grid;
-    padding: 8px;
+    padding: 8px 0;
 
     grid-template-columns: 75px auto;
 }
@@ -315,7 +318,7 @@ main section {
     background-position: 50%;
 }
 
-.news-deals div div{
+.news-deals div div {
     display: block;
     padding: 0;
 }
@@ -352,21 +355,21 @@ main section {
 }
 
 /* deal */
-.deals header{
+.deals header {
     display: flex;
     justify-content: space-between
 }
 
-.deals header > a{
+.deals header>a {
     margin-top: 8px;
     font-size: 14px;
 }
 
-.deals > div {
+.deals>div {
     position: relative;
 }
 
-.deals div .discount{
+.deals div .discount {
     display: none;
     position: absolute;
     top: 10px;
@@ -381,7 +384,7 @@ main section {
     background-repeat: no-repeat;
 }
 
-.discount span{
+.discount span {
     display: block;
     position: relative;
 
@@ -396,7 +399,7 @@ main section {
     font-weight: bold;
 }
 
-.deals .deal-price{
+.deals .deal-price {
     display: flex;
     padding-top: 4px;
     padding-left: 13px;
@@ -404,10 +407,115 @@ main section {
     align-items: baseline;
 }
 
-.deal-price :nth-child(2){
+.deal-price :nth-child(2) {
     color: #555;
     font-size: 16px;
     margin-left: 6px;
+}
+
+/* Funding */
+
+.wrapper .fund{
+    display: block ;
+}
+
+.fund header {
+    display: block;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.fund header h2 {
+    margin: 0;
+}
+
+.fund header div {
+    display: grid;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.fund header div a {
+    margin-top: 11px;
+}
+
+.fund img {
+    position: absolute;
+    margin: 10px;
+    height: 60px;
+}
+
+.fund>div {
+    display: grid;
+    grid-gap: 16px;
+}
+
+.fund-section {
+    background-color: rgb(255, 250, 248);
+}
+
+.fund-section h4 {
+    padding: 11px 0 11px 84px;
+    height: 43px;
+    box-sizing: border-box;
+
+    background-color: rgb(255, 68, 34);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.fund-section > a div{
+    height: 60px;
+    box-sizing: border-box;
+    padding: 11px 84px;
+    background-color: rgba(255, 68, 34, 0.08);
+}
+
+.fund-section h5{
+    font-size: 18px;
+    font-weight: bold;  
+}
+
+.fund-section h6{
+    font-size: 11px;
+    font-family: Shentox, sans-serif;
+    color: rgba(0,0,0,.5);
+    line-height: 2em;
+}
+
+.fund-section-middle{
+    display: grid;
+    height: 50px;
+    padding: 16px;
+
+    font-size: 16px;
+    border-bottom: 1px solid  rgba(255, 68, 34, 0.25); ;
+}
+
+.fund-section-middle span{
+    font-size: 13px;
+    color: #555;
+    margin-left: 10px;
+}
+
+.fund-section-bottom{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 45px;
+
+    padding: 0 16px;
+    color: #555;
+    font-size: 12px;
+    line-height: 16px;
+
+    text-transform: capitalize;
+}
+
+.fund-section-bottom span{
+    margin-left: 4px;
+    color: #aaa;
 }
 
 /* FOOTER */
@@ -462,7 +570,7 @@ footer div {
     box-sizing: border-box;
 }
 
-.links-social a:hover{
+.links-social a:hover {
     background: transparent;
     border: 2px solid #333;
 }
@@ -557,9 +665,13 @@ footer div {
         grid-column: span 3;
     }
 
-    .news-deals >div {
+    .news-deals {
+        grid-gap: 20px;
+    }
+
+    .news-deals>div {
         display: block;
-        padding: 10px;
+        padding: 0;
     }
 
     .news-image {
@@ -572,14 +684,48 @@ footer div {
         padding: 0;
     }
 
-    .deals div .discount{
+    .deals div .discount {
         display: block;
     }
 
-    .deals .deal-price{
+    .deals .deal-price {
         padding-left: 0;
     }
-  
+
+    .fund header {
+        display: block;
+        justify-content: space-between;
+    }
+
+    .fund header div {
+        display: flex;
+        font-size: 16px;
+    }
+
+    .fund header div a {
+        margin: 0;
+        margin-right: 23px;
+    }
+
+    .fund header div a::after {
+        content: "|";
+        margin-left: 11px;
+    }
+
+    .fund header div :nth-last-child(1)::after {
+        content: none;
+    }
+
+    .fund>div {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .fund > div > :nth-last-child(1){
+        display: none;
+    }
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -612,8 +758,13 @@ footer div {
         grid-column: span 4;
     }
 
+    .news-deals {
+        grid-gap: 24px;
+    }
+
     .news-deals>div {
-        padding: 12px;
+        display: block;
+        padding: 0;
     }
 
     .news-deals h4 {
@@ -624,10 +775,36 @@ footer div {
         font-size: 13px;
     }
 
-    .deals div .discount{
+    .deals div .discount {
         top: 12px;
         right: 12px;
     }
-  
 
+    .fund header {
+        display: flex;
+    }
+
+    .fund header div {
+        direction: rtl;
+    }
+
+    .fund header div a {
+        margin: 0;
+        margin-left: 23px;
+    }
+
+    .fund header div a::after {
+        margin: 0;
+        margin-right: 11px;
+    }
+
+    .fund>div {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .fund > div > :nth-last-child(1){
+        display: block;
+    }
 }
