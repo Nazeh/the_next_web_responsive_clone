@@ -8,7 +8,7 @@ a {
 }
 
 @font-face {
-    font-family: Shentox;
+    font-family: "Shentox";
     src: url("../fonts/Shentox\ Medium.ttf");
 }
 
@@ -102,7 +102,7 @@ nav {
 
     margin-left: 10px;
     font-size: 14px;
-    font-family: Shentox, sans-serif;
+    font-family: "Shentox", sans-serif;
     text-transform: uppercase;
 }
 
@@ -157,9 +157,6 @@ nav {
 
 
 /* Main */
-main {
-    padding-bottom: 40px;
-}
 
 main section {
     display: grid;
@@ -182,14 +179,14 @@ main section {
     color: white;
 }
 
-.cover-trigger {
+article .cover-trigger {
     position: absolute;
     display: block;
     height: 100%;
     width: 100%;
     z-index: 3;
 
-    background: linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(7, 7, 7, .5) 40%, rgba(19, 19, 19, 1) 100%);
 }
 
 .cover-date,
@@ -206,6 +203,8 @@ main section {
     background-image: url(../images/cover-gradient.png);
     background-size: cover;
     background-blend-mode: lighten;
+
+    cursor: pointer;
 }
 
 .cover-logo img {
@@ -219,16 +218,18 @@ main section {
 }
 
 
-.cover article header {
+.cover article header,
+.section-popular header {
     position: absolute;
     bottom: 0;
     padding: 14px 12px;
     z-index: 8;
 }
 
-.cover header a {
+.cover header a,
+.section-popular header {
     text-decoration: none;
-    font-family: Shentox, sans-serif;
+    font-family: "Shentox", sans-serif;
 
 }
 
@@ -236,20 +237,23 @@ main section {
     color: white;
 }
 
-.cover header h5 {
+.cover header h5,
+.section-popular header h5 {
     font-size: 14px;
     line-height: 1.5em;
     text-transform: uppercase;
 }
 
-.cover header h2 {
+.cover header h2,
+.section-popular header h3 {
     font-family: Avalon, sans-serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 22px;
 }
 
-.cover header p {
+.cover header p,
+.section-popular header p {
     display: flex;
 
     margin-top: 5px;
@@ -258,7 +262,8 @@ main section {
     color: rgba(255, 255, 255, .6);
 }
 
-.cover header p span {
+.cover header p span,
+.section-popular header p span {
     margin: 0 3px;
 }
 
@@ -266,17 +271,19 @@ main section {
 
 .wrapper {
     max-width: 1152px;
-    padding: 0 20px;
+    padding: 56px 20px;
     margin: auto;
+
+    display: grid;
+    row-gap: 56px;
 }
 
 .wrapper a {
     text-decoration: none;
 }
 
-.wrapper section {
+.wrapper>section {
     display: grid;
-    padding: 24px 0;
 }
 
 .wrapper section h2 {
@@ -290,11 +297,13 @@ main section {
     font-family: 'Passion One', cursive;
 }
 
-.wrapper section header a {
+.wrapper section header a,
+.middle-wrapper section h2 {
     color: #f42;
 }
 
-.wrapper section header a:hover {
+.wrapper section header a:hover,
+.middle-wrapper section h2  a:hover {
     color: #000;
 }
 
@@ -372,8 +381,8 @@ main section {
 .deals div .discount {
     display: none;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0;
+    right: 0;
 
     height: 80px;
     width: 80px;
@@ -415,8 +424,8 @@ main section {
 
 /* Funding */
 
-.wrapper .fund{
-    display: block ;
+.wrapper .fund {
+    display: block;
 }
 
 .fund header {
@@ -465,41 +474,42 @@ main section {
     font-weight: bold;
 }
 
-.fund-section > a div{
+.fund-section>a div {
     height: 60px;
     box-sizing: border-box;
     padding: 11px 84px;
     background-color: rgba(255, 68, 34, 0.08);
 }
 
-.fund-section h5{
+.fund-section h5 {
     font-size: 18px;
-    font-weight: bold;  
+    font-weight: bold;
 }
 
-.fund-section h6{
+.fund-section h6 {
     font-size: 11px;
-    font-family: Shentox, sans-serif;
-    color: rgba(0,0,0,.5);
+    font-family: "Shentox", sans-serif;
+    color: rgba(0, 0, 0, .5);
     line-height: 2em;
 }
 
-.fund-section-middle{
+.fund-section-middle {
     display: grid;
     height: 50px;
     padding: 16px;
 
     font-size: 16px;
-    border-bottom: 1px solid  rgba(255, 68, 34, 0.25); ;
+    border-bottom: 1px solid rgba(255, 68, 34, 0.25);
+    ;
 }
 
-.fund-section-middle span{
+.fund-section-middle span {
     font-size: 13px;
     color: #555;
     margin-left: 10px;
 }
 
-.fund-section-bottom{
+.fund-section-bottom {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -513,9 +523,107 @@ main section {
     text-transform: capitalize;
 }
 
-.fund-section-bottom span{
+.fund-section-bottom span {
     margin-left: 4px;
     color: #aaa;
+}
+
+/* middle-wrapper */
+.middle-wrapper>section {
+    display: block;
+    padding: 8px 0;
+}
+
+.section-popular {
+    position: relative;
+    padding-bottom: 75%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.section-popular h3 a {
+    color: white !important;
+}
+
+.section-popular p a {
+    color: rgba(255, 255, 255, .6) !important;
+}
+
+.section-popular p a:hover {
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+.section-latest {
+    height: 96px;
+    background-color: rgba(255, 68, 34, .06);
+    box-sizing: border-box;
+    margin: 2px 0;
+
+    display: grid;
+    grid-template-columns: auto 96px;
+    justify-content: space-between;
+
+}
+
+.section-latest>a {
+    display: block;
+
+    width: 100%;
+    height: 96px;
+    box-sizing: border-box;
+
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.section-latest header {
+    padding: 10px 14px;
+    color: rgb(255, 68, 34);
+
+}
+
+.section-latest h5 {
+    font-size: 13px;
+    font-family: "Shentox", sans-serif;
+    line-height: 18px;
+}
+
+.section-latest h4 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.section-latest h4 a:hover {
+    color: rgb(255, 68, 34) !important;
+    text-decoration: underline;
+}
+
+.middle-wrapper section ul li {
+    position: relative;
+
+    padding: 6px 14px;
+    color: #aaa;
+}
+
+.middle-wrapper section ul li::before {
+    content: "";
+
+    background-color: #f42;
+    border-radius: 50%;
+    display: block;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    left: 3px;
+    top: 10px;
+}
+
+.middle-wrapper section ul li a:hover {
+    color: black;
 }
 
 /* FOOTER */
@@ -581,7 +689,7 @@ footer div {
     flex-wrap: wrap;
     justify-content: center;
     text-transform: uppercase;
-    font-family: Shentox, sans-serif;
+    font-family: "Shentox", sans-serif;
     font-size: 14px;
 
     margin: auto;
@@ -722,9 +830,17 @@ footer div {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .fund > div > :nth-last-child(1){
+    .fund>div> :nth-last-child(1) {
         display: none;
     }
+
+    .middle-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 44px;
+        column-gap: 20px;
+    }
+
 
 }
 
@@ -804,7 +920,13 @@ footer div {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    .fund > div > :nth-last-child(1){
+    .fund>div> :nth-last-child(1) {
         display: block;
+    }
+
+    .middle-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 24px;
+        row-gap: 48px;
     }
 }
